@@ -1,0 +1,86 @@
+<html lang="en"><head>
+<meta charset="UTF-8">
+<title>Loading</title>
+
+<link rel="icon" href="https://stonesinfocus.com/StonesInFocus_Favicon.png">
+<link rel="shortcut icon" href="https://stonesinfocus.com/StonesInFocus_Favicon.png">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<style>
+body {
+  background: #60b89d;
+  height: 100%;
+}
+
+#container {
+  position: absolute;
+  top: 25vh;
+  left: calc(50vw - 25vh);
+  height: 50vh;
+  width: 50vh;
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<svg id="container" viewBox="0 0 0 0"><desc>Created with Snap</desc><defs></defs><circle cx="0" cy="0" r="0" fill="none" stroke="#ffffff" style="stroke-width: 3; stroke-dasharray: 0; stroke-dashoffset: 0; transform-origin: 0px 0px 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);" data-svg-origin="0 0"></circle><circle cx="0" cy="0" r="0" fill="none" stroke="#ffffff" style="stroke-width: 3; stroke-dasharray: 0; stroke-dashoffset: 0; transform-origin: 0px 0px 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);" data-svg-origin="0 0"></circle><circle cx="0" cy="0" r="0" fill="none" stroke="#ffffff" style="stroke-width: 3; stroke-dasharray: 0; stroke-dashoffset: 0; transform-origin: 0px 0px 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);" data-svg-origin="0 0"></circle><circle cx="0" cy="0" r="0" fill="none" stroke="#ffffff" style="stroke-width: 3; stroke-dasharray: 0; stroke-dashoffset: 0; transform-origin: 0px 0px 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);" data-svg-origin="0 0"></circle><circle cx="0" cy="0" r="0" fill="none" stroke="#ffffff" style="stroke-width: 3; stroke-dasharray: 0; stroke-dashoffset: 0; transform-origin: 0px 0px 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);" data-svg-origin="0 0"></circle><circle cx="0" cy="0" r="0" fill="none" stroke="#ffffff" style="stroke-width: 3; stroke-dasharray: 0; stroke-dashoffset: 0; transform-origin: 0px 0px 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);" data-svg-origin="0 0"></circle><circle cx="0" cy="0" r="0" fill="none" stroke="#ffffff" style="stroke-width: 3; stroke-dasharray: 0; stroke-dashoffset: 0; transform-origin: 0px 0px 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);" data-svg-origin="0 0"></circle><circle cx="0" cy="0" r="0" fill="none" stroke="#ffffff" style="stroke-width: 3; stroke-dasharray: 0; stroke-dashoffset: 0; transform-origin: 0px 0px 0px; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);" data-svg-origin="0 0"></circle><circle cx="0" cy="0" r="0" fill="none" stroke="#ffffff" style="stroke-width: 3; stroke-dasharray: 0; stroke-dashoffset: 0; transform: matrix(1, 0, 0, 1, 0, 0);" data-svg-origin="0 0"></circle><circle cx="0" cy="0" r="0" fill="none" stroke="#ffffff" style="stroke-width: 3; stroke-dasharray: 0; stroke-dashoffset: 0; transform: matrix(1, 0, 0, 1, 0, 0);" data-svg-origin="0 0"></circle><circle cx="0" cy="0" r="0" fill="none" stroke="#ffffff" style="stroke-width: 3; stroke-dasharray: 0; stroke-dashoffset: 0; transform: matrix(1, 0, 0, 1, 0, 0);" data-svg-origin="0 0"></circle></svg>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
+<script id="rendered-js">
+(function (window, document, tweenmax, snap, undefined) {
+  var container,rect,s,
+  width,height,
+  center,radius,
+  timeline,
+  numRings = 11,rings = [];
+
+  function makeRings() {
+    for (var i = 0; i < numRings; i++) {if (window.CP.shouldStopExecution(0)) break;
+
+      var ring = s.circle(center, center, radius).attr({ //create svg elements with snap
+        fill: 'none',
+        stroke: '#ffffff',
+        strokeWidth: 3,
+        'stroke-dasharray': 2 * (Math.PI * radius), //stroke dash covers full circumference of circle
+        'stroke-dashoffset': 2 * (Math.PI * radius) //offset stroke dash by circumference to hide
+      });
+
+      timeline.add(
+      new tweenmax.to(ring.node, 6, { //animate node of snap object with tweenmax
+        ease: Power2.easeInOut,
+        transformOrigin: 'center center',
+        'stroke-dashoffset': -4 * (Math.PI * radius) //negative offset stroke dash by 2x circumference
+      }), i * 0.1);
+
+
+      radius -= height / 30;
+    }window.CP.exitedLoop(0);
+  }
+
+  function init() {
+    container = document.getElementById('container');
+    rect = container.getBoundingClientRect();
+    width = rect.width;
+    height = rect.height;
+    center = height / 2;
+    radius = height / 2.5;
+    s = snap(container);
+    s.attr({ viewBox: "0 0 " + rect.width + " " + rect.height });
+    timeline = new TimelineMax({ repeat: -1, yoyo: true });
+    makeRings();
+  }
+  window.onload = init;
+})(this, document, TweenMax, Snap);
+//# sourceURL=pen.js
+    </script>
+
+
+</body></html>
