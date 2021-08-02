@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chris Jones for Governor</title>
+	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<style type="text/css">/* CLIENT-SPECIFIC STYLES AND FIXES */
+		
+		body, table, td, a{ /* Prevent WebKit and Windows mobile changing default text sizes */
+			-webkit-text-size-adjust: 100%; 
+			-ms-text-size-adjust: 100%;
+		} 
+		table, td{ /* Remove spacing between tables in Outlook 2007 and up */
+			mso-table-lspace: 0pt; 
+			mso-table-rspace: 0pt;
+		} 
+		img{ /* Allow smoother rendering of resized image in Internet Explorer */
+			-ms-interpolation-mode: bicubic;
+		} 
+
+		
+		
+		/* EMAIL STYLES */
+		
+		table img{ /** use table img instead of just img; else, transparent tracking pixel will also be affected **/
+			border: 0; 
+			height: auto; 
+			line-height: 100%; 
+			outline: none; 
+			text-decoration: none; 
+			max-width: 800px; 
+			width: 100%;
+		}
+
+        .logo img {
+            margin: 0 auto !important;
+            width: 375px !important;
+        }
+		
+        .logo-footer img{
+			margin: 0 auto !important;
+			width: 150px !important;
+		}
+
+		.goomoji img{
+			border: 0; 
+			height: 18px; 
+			line-height: 100%; 
+			outline: none; 
+			text-decoration: none;
+			width: auto;
+			padding-bottom: 5px;
+		}
+
+		img.socialfooter {
+			border: 0; 
+			height: auto;  
+			outline: none; 
+			text-decoration: none; 
+			max-width: 32px;
+			height: 32px;
+		}
+		
+		body{
+			height: 100% !important; 
+			margin: 0 !important; 
+			padding: 0 !important; 
+			width: 100% !important;
+		}
+	
+		a{
+			color: #6fcfeb !important; 
+			text-decoration: none; 
+			font-weight: 700;
+		}
+		a:hover{
+			text-decoration: underline;
+			-webkit-text-decoration-color: #000F9F;
+			text-decoration-color: #000F9F;
+		}
+		
+		p{
+			margin:13px 0; /*for yahoo*/
+            font-size: 20px;
+		} 
+
+		p.img{
+			margin:0px 0 !important; /*for yahoo*/
+			font-size: 18px;
+			line-height: 0px !important;
+		}
+
+		div.container{
+			padding-top: 10px;
+		}
+
+		p.mobile-flex{
+			display:inline;
+		}
+
+		#mobile-size{
+			font-size: 16px;
+		}  
+		
+		.socialfooter{
+			display: inline;
+			text-align: center;
+			max-width: 32px;
+		}
+
+		.unsubscribe a{
+			color: #6fcfeb !important;
+			text-decoration: none;
+			font-weight: 700;
+		}
+
+		.unsubscribe a:hover{
+			color: #6fcfeb !important;
+			text-decoration: underline;
+			font-weight: 700;
+		}
+
+		/* TEMPLATE STYLES */
+	
+		table td{
+			font-family: 'Avenir', Roboto, sans-serif; 
+			font-size: 20px;
+			line-height: 25px;
+			font-weight: 500;
+		}
+
+		.button_skyblue{
+			/*overflow: hidden;*/
+			mso-padding-alt:0px 20px 0px 20px;
+			margin:0 auto;  /** for yahoo webmail **/
+			background-color: #6fcfeb;
+			border-radius: 15px;
+			-webkit-transition-duration: 0.4s; /* Safari */
+  			transition-duration: .4s;
+  			cursor: pointer;
+		}
+
+		.button_skyblue:hover {
+  			background-color: #000F9F;
+  			color: white;
+		}
+
+		.button_skyblue td{
+			text-align: center;
+			width: 400px;
+			max-width: 600px;
+		}
+		
+		.button_skyblue a{
+			text-decoration:none; 
+			width:100%; 
+			display:block;
+			font-size: 22px;
+			color: #ffffff;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+
+		.button_skyblue span{
+			display:inline-block; 
+			padding-top:0; 
+			padding-bottom:0;
+		}
+
+		.buttonbanner_skyblue{
+			/*overflow: hidden;*/
+			mso-padding-alt:0px 20px 0px 20px;
+			margin:0 auto;  /** for yahoo webmail **/
+			-webkit-transition-duration: 0.4s; /* Safari */
+  			transition-duration: .4s;
+  			cursor: pointer;
+		}
+
+		.buttonbanner_skyblue:hover {
+  			background-color: #000F9F;
+  			color: white;
+		}
+
+		.buttonbanner_skyblue td{
+			width: 400px;
+			height: 400px;
+			max-width: 600px;
+		}
+		
+		.buttonbanner_skyblue a{
+			text-decoration:none; 
+			width:100%; 
+			display:block;
+			font-size: 22px;
+			color: #ffffff;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+
+		.buttonbanner_skyblue span{
+			display:inline-block; 
+			padding-top:0; 
+			padding-bottom:0;
+		}
+
+		.buttonsinglegrid_skyblue{
+			/*overflow: hidden;*/
+			mso-padding-alt:0px 20px 0px 20px;
+			margin:0 auto;  /** for yahoo webmail **/
+			background-color: #6fcfeb;
+			border-radius: 15px;
+			-webkit-transition-duration: 0.4s; /* Safari */
+  			transition-duration: .4s;
+  			cursor: pointer;
+		}
+
+		.buttonsinglegrid_skyblue:hover {
+  			background-color: #000F9F;
+  			color: white;
+		}
+
+		.buttonsinglegrid_skyblue td{
+			text-align: center;
+			width: 400px;
+			max-width: 600px;
+		}
+		
+		.buttonsinglegrid_skyblue a{
+			text-decoration:none; 
+			width:100%; 
+			display:block;
+			font-size: 22px;
+			color: #ffffff;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+
+		.buttonsinglegrid_skyblue span{
+			display:inline-block; 
+			padding-top: 0px;
+			padding-bottom: 0px;
+			text-align: 30px;
+		}
+
+		.buttonsinglegridfooter_skyblue{
+			/*overflow: hidden;*/
+			mso-padding-alt:0px 20px 0px 20px;
+			margin:0 auto;  /** for yahoo webmail **/
+			background-color: #6fcfeb;
+			border-radius: 50px;
+			-webkit-transition-duration: 0.4s; /* Safari */
+  			transition-duration: .4s;
+  			cursor: pointer;
+		}
+
+		.buttonsinglegridfooter_skyblue:hover {
+  			background-color: #6fcfeb;
+  			color: white;
+		}
+
+		.buttonsinglegridfooter_skyblue td{
+			text-align: center;
+			width: 55px;
+			max-width: 55px;
+		}
+		
+		.buttonsinglegridfooter_skyblue a{
+			text-decoration:none; 
+			width:100%; 
+			display:block;
+			font-size: 20px;
+			color: #ffffff;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+
+		.buttonsinglegridfooter_skyblue:hover a{
+			text-decoration:none; 
+			width:100%; 
+			display:block;
+			font-size: 20px;
+			color: #000F9F;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+
+		.buttonsinglegridfooter_skyblue span{
+			display:inline-block; 
+			padding-top: 0px;
+			padding-bottom: 0px;
+			text-align: 30px;
+		}
+
+		.buttonfooter_skyblue{
+			/*overflow: hidden;*/
+			mso-padding-alt:0px 20px 0px 20px;
+			margin:0 auto;  /** for yahoo webmail **/
+			background-color: #6fcfeb;
+			border-radius: 15px;
+			-webkit-transition-duration: 0.4s; /* Safari */
+  			transition-duration: .4s;
+  			cursor: pointer;
+		}
+
+		.buttonfooter_skyblue:hover {
+  			background-color: #6fcfeb;
+  			color: white;
+		}
+
+		.buttonfooter_skyblue td{
+			text-align: center;
+			width: 250px;
+			max-width: 250px;
+		}
+		
+		.buttonfooter_skyblue a{
+			text-decoration:none; 
+			width:100%; 
+			display:block;
+			font-size: 22px;
+			color: #ffffff;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+
+		.buttonfooter_skyblue span{
+			display:inline-block; 
+			padding-top:0; 
+			padding-bottom:0;
+		}
+
+		.button_oceanblue{
+			/*overflow: hidden;*/
+			mso-padding-alt:0px 20px 0px 20px;
+			margin:0 auto;  /** for yahoo webmail **/
+			background-color: #000F9F;
+			border-radius: 15px;
+			-webkit-transition-duration: 0.4s; /* Safari */
+  			transition-duration: .4s;
+  			cursor: pointer;
+		}
+
+		.button_oceanblue:hover {
+  			background-color: #6fcfeb;
+  			color: white;
+		}
+
+		.button_oceanblue td{
+			text-align: center;
+			width: 400px;
+			max-width: 600px;
+		}
+		
+		.button_oceanblue a{
+			text-decoration:none; 
+			width:100%; 
+			display:block;
+			font-size: 22px;
+			color: #ffffff;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+
+		.button_oceanblue span{
+			display:inline-block; 
+			padding-top:0; 
+			padding-bottom:0;
+		}
+
+		.buttonsinglegrid_oceanblue{
+			/*overflow: hidden;*/
+			mso-padding-alt:0px 20px 0px 20px;
+			margin:0 auto;  /** for yahoo webmail **/
+			background-color: #000F9F;
+			border-radius: 15px;
+			-webkit-transition-duration: 0.4s; /* Safari */
+  			transition-duration: .4s;
+  			cursor: pointer;
+		}
+
+		.buttonsinglegrid_oceanblue:hover {
+  			background-color: #6fcfeb;
+  			color: white;
+		}
+
+		.buttonsinglegrid_oceanblue td{
+			text-align: center;
+			width: 400px;
+			max-width: 600px;
+		}
+		
+		.buttonsinglegrid_oceanblue a{
+			text-decoration:none; 
+			width:100%; 
+			display:block;
+			font-size: 22px;
+			color: #ffffff;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+
+		.buttonsinglegrid_oceanblue span{
+			display:inline-block; 
+			padding-top: 0px;
+			padding-bottom: 0px;
+			text-align: 30px;
+		}
+
+		.buttonfooter_oceanblue{
+			/*overflow: hidden;*/
+			mso-padding-alt:0px 20px 0px 20px;
+			margin:0 auto;  /** for yahoo webmail **/
+			background-color: #000F9F;
+			border-radius: 15px;
+			-webkit-transition-duration: 0.4s; /* Safari */
+  			transition-duration: .4s;
+  			cursor: pointer;
+		}
+
+		.buttonfooter_oceanblue:hover {
+  			background-color: #6fcfeb;
+  			color: white;
+		}
+
+		.buttonfooter_oceanblue td{
+			text-align: center;
+			width: 250px;
+			max-width: 250px;
+		}
+		
+		.buttonfooter_oceanblue a{
+			text-decoration:none; 
+			width:100%; 
+			display:block;
+			font-size: 22px;
+			color: #ffffff;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+
+		.buttonfooter_oceanblue span{
+			display:inline-block; 
+			padding-top:0; 
+			padding-bottom:0;
+		}
+
+		.centering_wrapper {
+			width: 100%;   /** for yahoo webmail **/
+			text-align: center;
+		}
+		
+		.centering_wrapper td{
+			text-align: center;
+		}
+
+		.centering_wrapper table{
+			margin:0 auto; /** for yahoo webmail **/
+		}
+		
+		.spacer{
+			line-height: 0;
+			border-collapse: collapse;
+		}
+
+		tr.spaceAbove>td {
+  			padding-top: 1em;
+		}
+
+		/* MOBILE STYLES */
+		@media screen and (max-width: 550px) {
+
+			/* ALLOWS FOR FLUID TABLES */
+			.wrapper {
+				width: 100% !important;
+				max-width: 100% !important;
+			}
+
+			/* ADJUSTS LAYOUT OF LOGO IMAGE */
+			.logo img {
+				margin: 0 auto !important;
+				width: 275px !important;
+			}
+
+			.logo-footer img {
+				margin: 0 auto !important;
+				width: 150px !important;
+			}
+
+			/* USE THESE CLASSES TO HIDE CONTENT ON MOBILE */
+			.mobile-hide {
+				display: none !important;
+			}
+
+			.img-max {
+				max-width: 100% !important;
+				width: 100% !important;
+				height: auto !important;
+			}
+
+			/* FULL-WIDTH TABLES */
+			.responsive-table {
+				width: 100% !important;
+			}
+
+			/* UTILITY CLASSES FOR ADJUSTING PADDING ON MOBILE */
+			.padding {
+				padding: 10px 5% 15px 5% !important;
+			}
+
+			.padding-meta {
+				padding: 30px 5% 0px 5% !important;
+				text-align: center;
+			}
+
+			.padding-copy {
+				padding: 10px 0 10px 0 !important;
+			}
+
+			.no-padding {
+				padding: 0 !important;
+			}
+
+			.section-padding {
+				padding: 50px 15px 50px 15px !important;
+			}
+
+			/* ADJUST BUTTONS ON MOBILE */
+		
+			.mobile-button-container {
+				margin: 0 auto;
+				width: 100% !important;
+			}
+			
+			.mobile-button {
+				padding: 15px !important;
+				border: 0 !important;
+				font-size: 16px !important;
+				display: block !important;
+			}
+			
+		}
+
+		/*** BREAK SOMETHING responsive styles ***/
+		@media only screen and (max-device-width:550px), only screen and (max-width: 550px) {
+			
+			table[class="button"] {
+				width: 100% !important;
+				max-width: 350px !important;
+			}
+
+			#mobile-width{
+				max-width: 200px;
+			}
+
+			.button a{
+			    text-decoration:none; 
+			    width:100%; 
+			    display:block;
+			    font-size: 18px !important;
+			    padding-top: 13px !important;
+			    padding-bottom: 13px !important;
+		    }
+
+			.buttonsinglegridfooter_skyblue td{
+				text-align: center;
+				width: 51px;
+				max-width: 51px;
+			}
+
+			p.mobile-flex{
+				display:block;
+			}
+
+			.break{
+				display: none;
+			}
+
+			#mobile-size{
+				font-size: 14px;
+			} 
+				
+			.responsive_image {
+				width: 100% !important;
+				max-width: 600px !important;
+			}
+			
+			.fixed-width-btn{
+				width: 100% !important;
+			}
+			
+			.button-grid-wrapper{
+				width: 100% !important;				
+			}
+		}
+
+		@media only screen and (max-device-width:360px), only screen and (max-width: 360px) {
+			
+			table[class="button"] {
+				width: 100% !important;
+				max-width: 310px !important;
+			}
+
+			.button a{
+			    text-decoration:none; 
+			    width:100%; 
+			    display:block;
+			    font-size: 14px !important;
+			    padding-top: 10px !important;
+			    padding-bottom: 10px !important;
+		    }
+				
+			.responsive_image {
+				width: 100% !important;
+				max-width: 600px !important;
+			}
+			
+			.fixed-width-btn{
+				width: 100% !important;
+			}
+			
+			.button-grid-wrapper{
+				width: 100% !important;				
+			}
+		}
+
+		@media only screen and (max-device-width:330px), only screen and (max-width: 330px) {
+			
+			table[class="button"] {
+				width: 100% !important;
+				max-width: 310px !important;
+			}
+
+			.button a{
+			    text-decoration:none; 
+			    width:100%; 
+			    display:block;
+			    font-size: 14px !important;
+			    padding-top: 10px !important;
+			    padding-bottom: 10px !important;
+		    }
+				
+			.responsive_image {
+				width: 100% !important;
+				max-width: 600px !important;
+			}
+			
+			.fixed-width-btn{
+				width: 100% !important;
+			}
+			
+			.button-grid-wrapper{
+				width: 100% !important;				
+			}
+		}
+
+		@media only screen and (max-device-width:300px), only screen and (max-width: 300px) {
+			
+			table[class="button"] {
+				width: 100% !important;
+				max-width: 280px !important;
+			}
+
+			.button a{
+			    text-decoration:none; 
+			    width:100%; 
+			    display:block;
+			    font-size: 12px !important;
+		    }
+				
+			.responsive_image {
+				width: 100% !important;
+				max-width: 600px !important;
+			}
+			
+			.fixed-width-btn{
+				width: 100% !important;
+			}
+			
+			.button-grid-wrapper{
+				width: 100% !important;				
+			}
+		}
+	
+		/*** OTHER FIXES ***/
+		/*** These must stay down here, otherwise renders centering problems for yahoo ***/
+		
+		div[style*="margin: 16px 0;"] { /* ANDROID CENTER FIX */
+			margin: 0 !important; 
+		}
+		
+		a[x-apple-data-detectors] { /* iOS BLUE LINKS */
+			color: inherit !important;
+			text-decoration: none !important;
+			font-size: inherit !important;
+			font-family: inherit !important;
+			font-weight: inherit !important;
+			line-height: inherit !important;
+		}
+	</style>
+</head>
+<body style="margin: 0 !important; padding: 0 !important; font-family: 'Avenir', Roboto, sans-serif;"><!-- HIDDEN PREHEADER TEXT -->
+<div style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: 'Avenir', Roboto, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;</div>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%"><!-- HEADER -->
+	<tbody>
+		<tr>
+			<td align="center" bgcolor="#ffffff"><!--[if (gte mso 9)|(IE)]>
+			<table align="center" border="0" cellspacing="0" cellpadding="0" width="800">
+			<tr>
+			<td align="center" valign="top" width="800">
+			<![endif]-->
+			<table border="0" cellpadding="0" cellspacing="0" class="wrapper" style="max-width: 800px;" width="100%"><!-- SPACER -->
+				<tbody>
+					<tr>
+						<td class="spacer" style="padding-top: 5px; padding-bottom: 5px;">&nbsp;</td>
+					</tr>
+					<!-- LOGO -->
+					<tr>
+						<td align="center" class="logo" style="padding: 27px 5px 0;" valign="top"><a href="#" target="_blank"><img border="0" class="logo" height="auto" src="https://stonesinfocus.com/ChrisJones-Logo_Transparent_Header.png" style="display: block; width: 375px;" width="375" /> </a></td>
+					</tr>
+					<!-- SPACER -->
+					<tr>
+						<td class="spacer" style="padding-top: 10px; padding-bottom: 0px;">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			<!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]--></td>
+		</tr>
+		<!-- CONTENT  -->
+		<tr>
+			<td align="center" style="padding: 15px;"><!--[if (gte mso 9)|(IE)]>
+			<table align="center" border="0" cellspacing="0" cellpadding="0" width="800">
+			<tr>
+			<td align="center" valign="top" width="800">
+			<![endif]-->
+			<table border="0" cellpadding="0" cellspacing="0" class="responsive-table" style="max-width: 800px;" width="100%">
+				<tbody>
+					<tr>
+						<td><!-- COPY -->
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tbody>
+								<tr>
+									<td align="left" class="padding-copy" style="padding: 5px 0 0 0; color:#000000; font-weight: normal;"><!-- WRAPPER TOP  -->{{EmailContent}} <!-- WRAPPER BOTTOM --></td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- COPY --></td>
+					</tr>
+					<!-- SPACER -->
+					<tr>
+						<td class="spacer" style="padding-top: 5px; padding-bottom: 5px;">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- COPY WRAPPER --><!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]--></td>
+		</tr>
+		<!-- FOOTER  -->
+		<tr>
+			<td align="center" bgcolor="#000F9F"><!--[if (gte mso 9)|(IE)]>
+			<table align="center" border="0" cellspacing="0" cellpadding="0" width="800">
+			<tr>
+			<td align="center" valign="top" width="800">
+			<![endif]-->
+			<table align="center" border="0" cellpadding="0" cellspacing="0" class="responsive-table" style="max-width: 650px; padding: 25px 5px;" width="100%"><!-- SPACER --><!-- REMOVED --><!-- UNSUBSCRIBE COPY --><!-- DISCLAIMER -->
+				<tbody>
+					<tr>
+						<td align="center" class="cta" style="text-align: center; padding: 0;">
+						<table align="center" border="0" cellpadding="0" cellspacing="0" class="centering_wrapper" style="width:100%; text-align:center;" width="100%">
+							<tbody>
+								<tr style="width: 50%;">
+									<td align="center" class="logo-footer" style="padding: 27px 5px 10px;" valign="top"><a href="#" target="_blank"><img border="0" class="logo" height="auto" src="https://stonesinfocus.com/Jones_Headshot_Footer.png" style="display: inline-block; width: 200px;" width="200" /> </a></td>
+								</tr>
+								<!-- UNSUBSCRIBE COPY -->
+								<tr>
+									<td align="center" style="text-align: center; border-top: 1px solid #fff;">
+									<p class="unsubscribe" id="mobile-size" style="text-align: center; line-height: 1.30; color: #fff; margin:12px 0 0;">We believe that emails are the best way for our campaign to stay in touch with supporters like you. But if you'd like to receive fewer emails, <a href="#">click here</a>.</p>
+									</td>
+								</tr>
+								<tr>
+									<td align="center" style="text-align: center;">
+									<p id="mobile-size" style="text-align: center; line-height: 1.30; color: #fff; margin:12px 0 0;">If you'd like to support our campaign, you can click below to make a donation.</p>
+									</td>
+								</tr>
+								<tr>
+								</tr>
+							</tbody>
+						</table>
+
+						<table align="center" border="0" cellpadding="0" cellspacing="0" class="centering_wrapper" id="mobile-width" style="max-width: 250px; padding-top: 5px;" width="100%">
+							<tbody>
+								<tr>
+									<td align="center" style="padding-top:4px; padding-bottom:4px; padding-right: 4px; width: 33%;"><!-- white space between buttons edited here-->
+									<table align="center" border="0" cellpadding="0" cellspacing="0" class="buttonsinglegridfooter_skyblue" style="background-color: #6fcfeb;"><!-- for rounded corners add bordere-radius to style -->
+										<tbody>
+											<tr>
+												<td><!--- for outlined button, add border style here. CANNOT be combined with rounded corners -->
+												<table border="0" cellpadding="0" cellspacing="0" class="buttonsinglegridfooter_skyblue button" width="100%">
+													<tbody>
+														<tr>
+															<td align="center" height="34" style=" color:#ffffff;" width="33%"><a href="#" target="_blank"><span style="color:#ffffff;">$5</span></a></td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+									<td align="center" style="padding-top:4px; padding-bottom:4px; padding-left: 4px; padding-right: 4px; width: 33%;"><!-- white space between buttons edited here-->
+									<table align="center" border="0" cellpadding="0" cellspacing="0" class="buttonsinglegridfooter_skyblue" style="background-color: #6fcfeb;"><!-- for rounded corners add bordere-radius to style -->
+										<tbody>
+											<tr>
+												<td><!--- for outlined button, add border style here. CANNOT be combined with rounded corners -->
+												<table border="0" cellpadding="0" cellspacing="0" class="buttonsinglegridfooter_skyblue button" width="100%">
+													<tbody>
+														<tr>
+															<td align="center" height="34" style=" color:#ffffff;" width="33%"><a href="#" target="_blank"><span style="color:#ffffff;">$15</span></a></td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+									<td align="center" style="padding-top:4px; padding-bottom:4px; padding-left: 4px; padding-right: 4px; width: 33%;"><!-- white space between buttons edited here-->
+									<table align="center" border="0" cellpadding="0" cellspacing="0" class="buttonsinglegridfooter_skyblue" style="background-color: #6fcfeb;"><!-- for rounded corners add bordere-radius to style -->
+										<tbody>
+											<tr>
+												<td><!--- for outlined button, add border style here. CANNOT be combined with rounded corners -->
+												<table border="0" cellpadding="0" cellspacing="0" class="buttonsinglegridfooter_skyblue button" width="100%">
+													<tbody>
+														<tr>
+															<td align="center" height="34" style=" color:#ffffff;" width="33%"><a href="#" target="_blank"><span style="color:#ffffff;">$25</span></a></td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td class="spacer" style="padding-top: 5px; padding-bottom: 5px;">&nbsp;</td>
+					</tr>
+					<tr>
+						<td align="center" style="text-align: center;">
+						<table align="center" cellpadding="0" cellspacing="0">
+							<tbody>
+								<tr>
+									<td align="center" id="mobile-size" style="text-align: center; padding-top:12px; padding-bottom: 12px; padding-left: 15px; padding-right: 15px; font-weight: 700; color: #fff; border: 2px solid #f0f0f0;  border-radius: 50px; line-height: 1;">Paid for by The Committee to Elect Chris Jones</td>
+								</tr>
+								<tr>
+									<td align="center" style="text-align: center;">
+									<div class="container">
+									<p class="mobile-flex" id="mobile-size" style="text-align: center; line-height: 1.30; color: #f0f0f0; margin:1px 0 0;">815 Technology Drive</p>
+									<span class="break" style="color:#6fcfeb;  margin:1px 0 0;">| </span>
+
+									<p class="mobile-flex" id="mobile-size" style="text-align: center; line-height: 1.30; color: #f0f0f0; margin:1px 0 0;">P.O. Box 242046</p>
+									<span class="break" style="color:#6fcfeb; margin:1px 0 0;"> | </span>
+
+									<p class="mobile-flex" id="mobile-size" style="text-align: center; line-height: 1.30; color: #f0f0f0; margin:1px 0 0;">Little Rock, AR 72223-999</p>
+									<span class="break" style="color:#6fcfeb; margin:1px 0 0;"> | </span>
+
+									<p class="mobile-flex" id="mobile-size" style="text-align: center; line-height: 1.30; color: #f0f0f0; margin:1px 0 0;">United States</p>
+									</div>
+									</td>
+								</tr>
+								<tr>
+									<td align="center" style="text-align: center; padding: 0; padding-top: 5px;"><a href="mailto:xyz@zyx.com"><img class="socialfooter" src="https://stonesinfocus.com/CJ_EM_BL_v2.png" style="padding: 5px;" /></a> <a href="#" target="_blank"><img class="socialfooter" src="https://stonesinfocus.com/CJ_TW_BL_v2.png" style="padding: 5px;" /></a> <a href="#" target="_blank"><img class="socialfooter" src="https://stonesinfocus.com/CJ_FB_BL_v2.png" style="padding: 5px;" /></a></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td align="center" style="text-align: center; border-top: 1px solid #fff;">
+						<p class="unsubscribe" style="text-align: center; line-height: 1.30; font-size: 14px; color: #fff; margin:12px 0 0;">If you’d like to remove yourself from our list, please click {{UnsubscribeLink}}.</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+		<!-- SPACER -->
+		<tr>
+			<td class="spacer" style="padding-top: 12px; padding-bottom: 0px;">&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+<!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]--></body>
+</html>
