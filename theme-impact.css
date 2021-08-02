@@ -1,11 +1,11 @@
 	h1,h2,h3,h4,h5,h6{
-		font-family:'Avenir',serif !important;
+		font-family:'Avenir',sans-serif !important;
 		font-weight:900!important;
 		color:#F3F3EE!important
 		}
 
 	p{
-		font-family:'Avenir',serif !important;
+		font-family:'Avenir',sans-serif !important;
 		font-weight:400!important;
 		color:#fff!important
 		}
@@ -15,7 +15,7 @@
 		}
 
 	.fa-lead{
-		font-family:'Avenir',serif !important;
+		font-family:'Avenir',sans-serif !important;
 		font-weight:400!important;
 		color:#fff!important
 		}
@@ -38,7 +38,7 @@
         }
 
 	legend{
-		font-family:'Avenir',serif !important;
+		font-family:'Avenir',sans-serif !important;
 		font-weight:500!important;
 		color:#F3F3EE!important;
 		text-transform:uppercase;
@@ -46,19 +46,19 @@
 		}
 
 	label{
-		font-family:'Avenir',serif !important;
+		font-family:'Avenir',sans-serif !important;
 		font-weight:900!important;
 		color:#F3F3EE!important
 		}
 
 	.radios label,label.at-check{
-		font-family:'Avenir',serif !important;
+		font-family:'Avenir',sans-serif !important;
 		font-weight:400!important;
 		color:#fff!important
 		}
 
 	label input[type=checkbox]+span{
-		font-family:'Avenir',serif !important;
+		font-family:'Avenir',sans-serif !important;
 		font-weight:400!important;
 		color:#fff!important
 		}
@@ -94,7 +94,7 @@
 		}
 
 	input,select,textarea{
-		font-family:'Avenir',serif !important;
+		font-family:'Avenir',sans-serif !important;
 		font-weight:400!important;
 		color:#000!important
 		}
@@ -114,7 +114,7 @@
 		}
 
 	input.at-submit,input.btn-at-primary{
-		font-family:'Avenir',serif !important;
+		font-family:'Avenir',sans-serif !important;
 		font-weight:900!important;
 		font-size:1.5em!important;
 		color:#fff!important;
@@ -134,7 +134,7 @@
 		}
 
 	.footer__links a,.footer__message{
-		font-family:'Avenir',serif !important;
+		font-family:'Avenir',sans-serif !important;
 		font-weight:400!important;
 		color:#000!important
 		}
