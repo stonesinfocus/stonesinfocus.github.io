@@ -1,0 +1,200 @@
+	h1,h2,h3,h4,h5,h6{
+		font-family:'Avenir',serif !important;
+		font-weight:900!important;
+		color:#F3F3EE!important
+		}
+
+	p{
+		font-family:'Avenir',serif !important;
+		font-weight:400!important;
+		color:#fff!important
+		}
+
+	strong{
+		font-weight:700!important
+		}
+
+	.fa-lead{
+		font-family:'Avenir',serif !important;
+		font-weight:400!important;
+		color:#fff!important
+		}
+
+	.fa-lead a{
+		font-weight:700!important;
+		color:#F3F3EE!important
+		}
+
+	.fastAction .circle:active,.fastAction .circle:focus,.fastAction .circle:hover{
+		background:#F3F3EE!important
+		}
+
+    .at-inner{
+        background: #3A469D!important;
+        }
+
+    .fastAction{
+        background: #3A469D!important;
+        }
+
+	legend{
+		font-family:'Avenir',serif !important;
+		font-weight:500!important;
+		color:#F3F3EE!important;
+		text-transform:uppercase;
+		letter-spacing:.075em
+		}
+
+	label{
+		font-family:'Avenir',serif !important;
+		font-weight:900!important;
+		color:#F3F3EE!important
+		}
+
+	.radios label,label.at-check{
+		font-family:'Avenir',serif !important;
+		font-weight:400!important;
+		color:#fff!important
+		}
+
+	label input[type=checkbox]+span{
+		font-family:'Avenir',serif !important;
+		font-weight:400!important;
+		color:#fff!important
+		}
+
+	.updateMyProfileSection .text{
+		font-weight:400!important
+		}
+
+    .at label small{
+        color: #fff!important;
+        }
+
+	.ngp-form .allow-dropdown,.ngp-form .at-checkbox-title-container:before,.ngp-form input,.ngp-form select,.ngp-form textarea{
+		border-color:#c2c2c2!important;
+		border-width:1px!important;
+		border-radius:3px!important
+		}
+
+	.ngp-form .allow-dropdown:hover,.ngp-form input:hover,.ngp-form select:hover,.ngp-form textarea:hover{
+		border-color:#5083E1!important
+		}
+
+	.ngp-form .at-checkbox-title-container:after{
+		color:#F3F3EE!important
+		}
+
+	.ngp-form .at-checkbox-title-container:hover:before{
+		border-color:#5083E1!important
+		}
+
+	.ngp-form input[type=radio]:before{
+		background:#F3F3EE!important
+		}
+
+	input,select,textarea{
+		font-family:'Avenir',serif !important;
+		font-weight:400!important;
+		color:#000!important
+		}
+
+	.updateMyProfileSection label input[type=checkbox]+span:before{
+		border-color:#c2c2c2!important;
+		border-width:1px!important;
+		border-radius:3px!important
+		}
+
+	.updateMyProfileSection label input[type=checkbox]+span:after{
+		color:#F3F3EE!important
+		}
+
+	.updateMyProfileSection label:hover input[type=checkbox]+span:before{
+		border-color:#5083E1!important
+		}
+
+	input.at-submit,input.btn-at-primary{
+		font-family:'Avenir',serif !important;
+		font-weight:900!important;
+		font-size:1.5em!important;
+		color:#fff!important;
+		text-transform:normal!important;
+		background:#D7262A!important;
+		border:none!important;
+		border-radius:0px!important;
+		-webkit-transition:background .25s ease-in-out!important;
+		-o-transition:background .25s ease-in-out!important;
+		-moz-transition:background .25s ease-in-out!important;
+		transition:background .25s ease-in-out!important;
+		padding-bottom:.1em!important
+		}
+
+	input.at-submit:active,input.at-submit:focus,input.at-submit:hover,input.btn-at-primary:active,input.btn-at-primary:focus,input.btn-at-primary:hover{
+		background:#5083E1!important
+		}
+
+	.footer__links a,.footer__message{
+		font-family:'Avenir',serif !important;
+		font-weight:400!important;
+		color:#000!important
+		}
+
+	.footer__message{
+		border-color:#000!important;
+		border-width:1px!important
+		}
+
+	.footer__message a{
+		color:#D7262A!important
+		}
+
+    a.middle{
+        position: relative;
+        }
+
+    a.middle:before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #D7262A;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out;
+        }
+    
+    a.middle:hover:before{
+        visibility: visible;
+        transform: scaleX(0.6);
+        }
+
+	footer{
+		background:#F3F3EE!important
+		}
+
+	html{
+		background:#F3F3EE!important
+		}
+
+	article{
+		background:#3A469D!important;
+        border-radius: 5px;
+		}
+
+	main{
+		background-color:#F3F3EE!important
+		}
+
+	main.Color,main.color{
+		background-color:#F3F3EE !important
+		}
+
+	main.Gradient,main.gradient{
+		background-image:-webkit-gradient(linear,left top,right bottom,from(#F3F3EE),to(#3A469D))!important;
+		background-image:-webkit-linear-gradient(top left,#F3F3EE,#3A469D)!important;
+		background-image:-moz-linear-gradient(top left,#F3F3EE,#3A469D)!important;
+		background-image:-o-linear-gradient(top left,#F3F3EE,#3A469D)!important;
+		background-image:linear-gradient(to bottom right,#F3F3EE,#3A469D)!important}
+/*# sourceMappingURL=theme-impact.css.map */
