@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tim Ryan for Ohio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<style type="text/css">/* CLIENT-SPECIFIC STYLES AND FIXES */		
+        
+        body, table, td, a{ /* Prevent WebKit and Windows mobile changing default text sizes */
+			-webkit-text-size-adjust: 100%; 
+			-ms-text-size-adjust: 100%;
+		} 
+
+		table, td{ /* Remove spacing between tables in Outlook 2007 and up */
+			mso-table-lspace: 0pt; 
+			mso-table-rspace: 0pt;
+		} 
+		img{ /* Allow smoother rendering of resized image in Internet Explorer */
+			-ms-interpolation-mode: bicubic;
+		} 
+
+		
+		
+		/* EMAIL STYLES */
+		
+		table img{ /** use table img instead of just img; else, transparent tracking pixel will also be affected **/
+			border: 0; 
+			height: auto; 
+			line-height: 100%; 
+			outline: none; 
+			text-decoration: none; 
+			max-width: 600px; 
+		}
+		
+        .logo img {
+            margin: 0 auto !important;
+            width: 275px !important;
+        }
+		
+        .logo-footer img{
+			margin: 0 auto !important;
+			width: 150px !important;
+		}
+
+		.goomoji img{
+			border: 0; 
+			height: 18px; 
+			line-height: 100%; 
+			outline: none; 
+			text-decoration: none;
+			width: auto;
+			padding-bottom: 5px;
+		}
+
+		img.socialfooter {
+			border: 0; 
+			height: auto;  
+			outline: none; 
+			text-decoration: none; 
+			max-width: 24px;
+			height: 24px;
+		}
+
+		img.socialfooter:hover {
+			border: 0; 
+			height: auto;  
+			outline: none; 
+			text-decoration: none;
+			opacity: .9; 
+			max-width: 24px;
+			height: 24px;
+		}
+		
+		body{
+			height: 100% !important; 
+			margin: 0 !important; 
+			padding: 0 !important; 
+			width: 100% !important;
+		}
+
+		label{
+    		display: inline-block;
+    		font-size: 18px;
+    		clear: left;
+    		width: 101px;
+		}
+
+		input {
+    		border-radius: 5px; 
+    		-webkit-box-shadow: 
+      			inset 0 0 8px  rgba(0,0,0,0.1),
+            	0 0 16px rgba(0,0,0,0.1); 
+    		-moz-box-shadow: 
+      			inset 0 0 8px  rgba(0,0,0,0.1),
+            	0 0 16px rgba(0,0,0,0.1); 
+    		box-shadow: 
+      			inset 0 0 8px  rgba(0,0,0,0.1),
+            	0 0 16px rgba(0,0,0,0.1); 
+    		padding: 10px;
+    		background: rgba(255,255,255,0.5);
+    		margin: 0 0 10px 0;
+    		font-family: 'Avenir', sans-serif;
+    		font-size: 18px;
+		}
+
+		textarea {
+  			-webkit-transition: all 0.30s ease-in-out;
+  			-moz-transition: all 0.30s ease-in-out;
+  			-ms-transition: all 0.30s ease-in-out;
+  			-o-transition: all 0.30s ease-in-out;
+  			outline: none;
+  			padding: 3px 0px 3px 3px;
+  			margin: 5px 1px 3px 0px;
+  			border: 1px solid #DDDDDD;
+  		}
+
+  		textarea:focus {
+  			box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  			padding: 3px 0px 3px 3px;
+  			margin: 5px 1px 3px 0px;
+  			border: 1px solid rgba(81, 203, 238, 1);
+		}
+		
+		a{
+			color: #ff4848 !important; 
+			text-decoration: none; 
+			font-weight: 700;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+		
+		p{
+			margin:13px 0; /*for yahoo*/
+            font-size: 20px;
+		} 
+
+		p.img{
+			margin:0px 0 !important; /*for yahoo*/
+			font-size: 18px;
+			line-height: 0px !important;
+		}    
+		
+		.social-icon:hover{
+			opacity: 0.8;
+		}
+
+		.socialfooter{
+			display: inline;
+			text-align: center;
+		}
+		
+		a.footer {
+			color:#ff4848 !important;
+            font-weight: 700; 
+			text-decoration: none;
+		}
+
+		a.footer:hover{
+			text-decoration: underline;
+		}
+
+		.unsubscribe a{
+			color: #ff4848 !important;
+			text-decoration: none;
+			font-weight: 700;
+		}
+
+		.unsubscribe a:hover{
+			color: #ff4848 !important;
+			text-decoration: underline;
+			font-weight: 700;
+		}
+		
+		
+		/* BREAK SOMETHING TEMPLATE STYLES */
+	
+		table td{
+			font-family: 'Avenir', sans-serif; 
+			font-size: 18px;
+			line-height: 25px;
+			font-weight: 500;
+		}
+
+		.button_red{
+			/*overflow: hidden;*/
+			mso-padding-alt:0px 20px 0px 20px;
+			margin:0 auto;  /** for yahoo webmail **/
+			background-color: #ff4848;
+			-webkit-transition-duration: 0.4s; /* Safari */
+  			transition-duration: .4s;
+  			cursor: pointer;
+  			border-radius: 5px;
+		}
+
+		.button_red:hover {
+  			background-color: #000080;
+  			border-radius: 50px;
+  			color: white;
+		}
+
+		.button_red td{
+			text-align: center;
+			width: 400px;
+			max-width: 600px;
+		}
+		
+		.button_red a{
+			text-decoration:none; 
+			width:100%; 
+			display:block;
+			font-size: 22px;
+			color: #ffffff;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+
+		.button_red span{
+			display:inline-block; 
+			padding-top:0; 
+			padding-bottom:0;
+		}
+
+		.buttonfooter_red{
+			/*overflow: hidden;*/
+			mso-padding-alt:0px 20px 0px 20px;
+			margin:0 auto;  /** for yahoo webmail **/
+			background-color: #ff4848;
+			border-radius: 50px;
+			-webkit-transition-duration: 0.4s; /* Safari */
+  			transition-duration: .4s;
+  			cursor: pointer;
+  			border-radius: 5px;
+		}
+
+		.buttonfooter_red:hover {
+  			background-color: #ff4848;
+  			border-radius: 50px;
+  			color: white;
+		}
+
+		.buttonfooter_red td{
+			text-align: center;
+			width: 275px;
+			max-width: 400px;
+		}
+		
+		.buttonfooter_red a{
+			text-decoration:none; 
+			width:100%; 
+			display:block;
+			font-size: 14px;
+			color: #ffffff;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+
+		.buttonfooter_red span{
+			display:inline-block; 
+			padding-top:0; 
+			padding-bottom:0;
+		}
+		
+		.buttonsinglegrid_red{
+			/*overflow: hidden;*/
+			mso-padding-alt:0px 20px 0px 20px;
+			margin:0 auto;  /** for yahoo webmail **/
+			background-color: #ff4848;
+			border-radius: 5px;
+			-webkit-transition-duration: 0.4s; /* Safari */
+  			transition-duration: .4s;
+  			cursor: pointer;
+		}
+
+		.buttonsinglegrid_red:hover {
+  			background-color: #000080;
+  			border-radius: 50px;
+  			color: white;
+		}
+
+		.buttonsinglegrid_red td{
+			text-align: center;
+			width: 400px;
+			max-width: 600px;
+		}
+		
+		.buttonsinglegrid_red a{
+			text-decoration:none; 
+			width:100%; 
+			display:block;
+			font-size: 22px;
+			color: #ffffff;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+
+		.buttonsinglegrid_red span{
+			display:inline-block; 
+			padding-top: 0px;
+			padding-bottom: 0px;
+			text-align: 30px;
+		}
+
+		.button_blue{
+			/*overflow: hidden;*/
+			mso-padding-alt:0px 20px 0px 20px;
+			margin:0 auto;  /** for yahoo webmail **/
+			background-color: #000080;
+			-webkit-transition-duration: 0.4s; /* Safari */
+  			transition-duration: .4s;
+  			cursor: pointer;
+  			border-radius: 5px;
+		}
+
+		.button_blue:hover {
+  			background-color: #ff4848;
+  			border-radius: 50px;
+  			color: white;
+		}
+
+		.button_blue td{
+			text-align: center;
+			width: 400px;
+			max-width: 600px;
+		}
+		
+		.button_blue a{
+			text-decoration:none; 
+			width:100%; 
+			display:block;
+			font-size: 22px;
+			color: #ffffff;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+
+		.button_blue span{
+			display:inline-block; 
+			padding-top:0; 
+			padding-bottom:0;
+		}
+		
+		.buttonsinglegrid_blue{
+			/*overflow: hidden;*/
+			mso-padding-alt:0px 20px 0px 20px;
+			margin:0 auto;  /** for yahoo webmail **/
+			background-color: #000080;
+			border-radius: 5px;
+			-webkit-transition-duration: 0.4s; /* Safari */
+  			transition-duration: .4s;
+  			cursor: pointer;
+		}
+
+		.buttonsinglegrid_blue:hover {
+  			background-color: #ff4848;
+  			border-radius: 50px;
+  			color: white;
+		}
+
+		.buttonsinglegrid_blue td{
+			text-align: center;
+			width: 400px;
+			max-width: 600px;
+		}
+		
+		.buttonsinglegrid_blue a{
+			text-decoration:none; 
+			width:100%; 
+			display:block;
+			font-size: 22px;
+			color: #ffffff;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+
+		.buttonsinglegrid_blue span{
+			display:inline-block; 
+			padding-top: 0px;
+			padding-bottom: 0px;
+			text-align: 30px;
+		}
+
+		.centering_wrapper {
+			width: 100%;   /** for yahoo webmail **/
+			text-align: center;
+		}
+		
+		.centering_wrapper td{
+			text-align: center;
+		}
+
+		.centering_wrapper table{
+			margin:0 auto; /** for yahoo webmail **/
+		}
+		
+		.spacer{
+			line-height: 0;
+			border-collapse: collapse;
+		}
+
+		tr.spaceAbove>td {
+  			padding-top: 1em;
+		}
+
+		/* MOBILE STYLES */
+		@media screen and (max-width: 550px) {
+
+			/* ALLOWS FOR FLUID TABLES */
+			.wrapper {
+				width: 100% !important;
+				max-width: 100% !important;
+			}
+
+			/* ADJUSTS LAYOUT OF LOGO IMAGE */
+			.logo img {
+				margin: 0 auto !important;
+				width: 275px !important;
+			}
+
+			/* USE THESE CLASSES TO HIDE CONTENT ON MOBILE */
+			.mobile-hide {
+				display: none !important;
+			}
+
+			.img-max {
+				max-width: 100% !important;
+				width: 100% !important;
+				height: auto !important;
+			}
+
+			/* FULL-WIDTH TABLES */
+			.responsive-table {
+				width: 100% !important;
+			}
+
+			/* UTILITY CLASSES FOR ADJUSTING PADDING ON MOBILE */
+			.padding {
+				padding: 10px 5% 15px 5% !important;
+			}
+
+			.padding-meta {
+				padding: 30px 5% 0px 5% !important;
+				text-align: center;
+			}
+
+			.padding-copy {
+				padding: 10px 0 10px 0 !important;
+			}
+
+			.no-padding {
+				padding: 0 !important;
+			}
+
+			.section-padding {
+				padding: 50px 15px 50px 15px !important;
+			}
+
+			/* ADJUST BUTTONS ON MOBILE */
+		
+			.mobile-button-container {
+				margin: 0 auto;
+				width: 100% !important;
+			}
+			
+			.mobile-button {
+				padding: 15px !important;
+				border: 0 !important;
+				font-size: 16px !important;
+				display: block !important;
+			}
+			
+		}
+
+		/*** BREAK SOMETHING responsive styles ***/
+		@media only screen and (max-device-width:550px), only screen and (max-width: 550px) {
+			
+			table[class="button"] {
+				width: 100% !important;
+				max-width: 350px !important;
+			}
+
+			.button a{
+			    text-decoration:none; 
+			    width:100%; 
+			    display:block;
+			    font-size: 18px !important;
+			    padding-top: 13px !important;
+			    padding-bottom: 13px !important;
+		    }
+				
+			.responsive_image {
+				width: 100% !important;
+				max-width: 600px !important;
+			}
+			
+			.fixed-width-btn{
+				width: 100% !important;
+			}
+			
+			.button-grid-wrapper{
+				width: 100% !important;				
+			}
+		}
+
+		@media only screen and (max-device-width:360px), only screen and (max-width: 360px) {
+			
+			table[class="button"] {
+				width: 100% !important;
+				max-width: 310px !important;
+			}
+
+			.button a{
+			    text-decoration:none; 
+			    width:100%; 
+			    display:block;
+			    font-size: 14px !important;
+			    padding-top: 10px !important;
+			    padding-bottom: 10px !important;
+		    }
+				
+			.responsive_image {
+				width: 100% !important;
+				max-width: 600px !important;
+			}
+			
+			.fixed-width-btn{
+				width: 100% !important;
+			}
+			
+			.button-grid-wrapper{
+				width: 100% !important;				
+			}
+		}
+
+		@media only screen and (max-device-width:330px), only screen and (max-width: 330px) {
+			
+			table[class="button"] {
+				width: 100% !important;
+				max-width: 310px !important;
+			}
+
+			.button a{
+			    text-decoration:none; 
+			    width:100%; 
+			    display:block;
+			    font-size: 14px !important;
+			    padding-top: 10px !important;
+			    padding-bottom: 10px !important;
+		    }
+				
+			.responsive_image {
+				width: 100% !important;
+				max-width: 600px !important;
+			}
+			
+			.fixed-width-btn{
+				width: 100% !important;
+			}
+			
+			.button-grid-wrapper{
+				width: 100% !important;				
+			}
+		}
+
+		@media only screen and (max-device-width:300px), only screen and (max-width: 300px) {
+			
+			table[class="button"] {
+				width: 100% !important;
+				max-width: 280px !important;
+			}
+
+			.button a{
+			    text-decoration:none; 
+			    width:100%; 
+			    display:block;
+			    font-size: 12px !important;
+		    }
+				
+			.responsive_image {
+				width: 100% !important;
+				max-width: 600px !important;
+			}
+			
+			.fixed-width-btn{
+				width: 100% !important;
+			}
+			
+			.button-grid-wrapper{
+				width: 100% !important;				
+			}
+		}
+	
+		/*** OTHER FIXES ***/
+		/*** These must stay down here, otherwise renders centering problems for yahoo ***/
+		
+		div[style*="margin: 16px 0;"] { /* ANDROID CENTER FIX */
+			margin: 0 !important; 
+		}
+		
+		a[x-apple-data-detectors] { /* iOS BLUE LINKS */
+			color: inherit !important;
+			text-decoration: none !important;
+			font-size: inherit !important;
+			font-family: inherit !important;
+			font-weight: inherit !important;
+			line-height: inherit !important;
+		}
+	</style>
+</head>
+<body style="margin: 0 !important; padding: 0 !important; font-family: 'Avenir', sans-serif;"><!-- HIDDEN PREHEADER TEXT -->
+{% if preview_text %}<div style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: 'Avenir', sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">{{ preview_text }}</div>{% endif %}
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%"><!-- HEADER -->
+	<tbody>
+		<tr>
+			<td align="center" bgcolor="#ffffff"><!--[if (gte mso 9)|(IE)]>
+			<table align="center" border="0" cellspacing="0" cellpadding="0" width="800">
+			<tr>
+			<td align="center" valign="top" width="800">
+			<![endif]-->
+			<table border="0" cellpadding="0" cellspacing="0" class="wrapper" style="max-width: 800px;" width="100%"><!-- SPACER -->
+				<tbody>
+					<tr>
+						<td class="spacer" style="padding-top: 5px; padding-bottom: 5px;">&nbsp;</td>
+					</tr>
+					<!-- LOGO -->
+					<tr>
+						<td align="center" class="logo" style="padding: 27px 5px 0;" valign="top"><a href="https://secure.actblue.com/donate/rya_template?refcode=rya_headerlogo&amount=25" target="_blank"><img border="0" class="logo" height="auto" src="https://s3.amazonaws.com/ak-timforoh/images/Ryan-png24-2.png" style="display: block; width: 275px;" width="275" /> </a></td>
+					</tr>
+					<!-- SPACER -->
+					<tr>
+						<td class="spacer" style="padding-top: 10px; padding-bottom: 0px;">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			<!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]--></td>
+		</tr>
+		<!-- CONTENT  -->
+		<tr>
+			<td align="center" bgcolor="#ffffff" style="padding: 15px;"><!--[if (gte mso 9)|(IE)]>
+			<table align="center" border="0" cellspacing="0" cellpadding="0" width="800">
+			<tr>
+			<td align="center" valign="top" width="800">
+			<![endif]-->
+			<table border="0" cellpadding="0" cellspacing="0" class="responsive-table" style="max-width: 800px;" width="100%">
+				<tbody>
+					<tr>
+						<td><!-- COPY -->
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tbody>
+								<tr>
+									<td align="left" class="padding-copy" style="padding: 5px 0 0 0; color:#000000; font-weight: normal;">
+										<!-- WRAPPER TOP  -->
+										{% block content %}{% endblock content %}
+										<!-- WRAPPER BOTTOM -->
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- COPY --></td>
+					</tr>
+					<!-- SPACER -->
+					<tr>
+						<td class="spacer" style="padding-top: 5px; padding-bottom: 5px;">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- COPY WRAPPER --><!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]--></td>
+		</tr>
+		<!-- FOOTER  -->
+		<tr>
+			<td align="center" bgcolor="#31c1d8" style="border: 15px solid #ff4848;background: #000080;"><!--[if (gte mso 9)|(IE)]>
+			<table align="center" border="0" cellspacing="0" cellpadding="0" width="800">
+			<tr>
+			<td align="center" valign="top" width="800">
+			<![endif]-->
+			<table align="center" border="0" cellpadding="0" cellspacing="0" class="responsive-table" style=" max-width: 800px; padding: 25px 5px;" width="100%"><!-- SPACER --><!-- REMOVED --><!-- UNSUBSCRIBE COPY --><!-- DISCLAIMER -->
+				<tbody>
+					<tr>
+						<td align="center" class="cta" style="text-align: center; padding: 0;">
+						<table align="center" border="0" cellpadding="0" cellspacing="0" class="centering_wrapper" style="width:100%; text-align:center;" width="100%">
+							<tbody>
+								<tr>
+									<td align="center" class="logo-footer" style="padding: 27px 5px 0;" valign="top"><a href="https://secure.actblue.com/donate/rya_template?refcode=rya_footerlogo&amount=25" target="_blank"><img border="0" class="logo-footer" height="auto" src="https://s3.amazonaws.com/ak-timforoh/images/Ryan-circle-png24_1.png" style="display: inline-block; width: 150px;" width="150" /> </a></td>
+								</tr>
+								<!-- UNSUBSCRIBE COPY -->
+								<tr>
+									<td align="center" style="text-align: center;">
+									<p style="text-align: center; line-height: 1.30; font-weight: 400;font-size: 16px; color: #ffffff; margin:12px 0 0;"><span style="font-size:14px;">We believe that emails are the best way for our organization to stay in touch with supporters like you. But if you'd like to receive fewer emails, <a class="footer" href="https://act.timforoh.com/signup/Fewer_Emails/">click here</a>.</span></p>
+									</td>
+								</tr>
+								<tr>
+									<td align="center" style="text-align: center;">
+									<p style="text-align: center; line-height: 1.30; font-size: 16px; font-weight: 400; color: #ffffff; margin:12px 0 0;"><span style="font-size:14px;">If you'd like to make a donation to our campaign, you can do that below!</a></span></p>
+									</td>
+								</tr>
+								<tr>
+									<td align="center" style="padding-top:10px; padding-bottom:2px;"><!-- white space between buttons edited here-->
+									<table align="center" border="0" cellpadding="0" cellspacing="0" class="buttonfooter_red" style="background-color: #ff4848; border-radius: 50px;"><!-- for rounded corners add bordere-radius to style -->
+										<tbody>
+											<tr>
+												<td><!--- for outlined button, add border style here. CANNOT be combined with rounded corners -->
+												<table border="0" cellpadding="0" cellspacing="0" class="buttonfooter_red button" width="100%">
+													<tbody>
+														<tr>
+															<td align="center" height="34" style="color:#ffffff;" width="100%"><a href="https://secure.actblue.com/donate/rya_templatemonthly?refcode=rya_footerAB&amount=25&amp;recurring=true" style="color:#ffffff; font-size: 14px; padding-top:10px; padding-bottom:10px;" target="_blank"><span style=" padding-right:2px; padding-left:2px; color:#ffffff;">Donate Monthly</span></a></td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+								<tr>
+									<td align="center" style="padding-top:10px; padding-bottom:2px;"><!-- white space between buttons edited here-->
+									<table align="center" border="0" cellpadding="0" cellspacing="0" class="buttonfooter_red" style="background-color: #ff4848; border-radius: 50px;"><!-- for rounded corners add bordere-radius to style -->
+										<tbody>
+											<tr>
+												<td><!--- for outlined button, add border style here. CANNOT be combined with rounded corners -->
+												<table border="0" cellpadding="0" cellspacing="0" class="buttonfooter_red button" width="100%">
+													<tbody>
+														<tr>
+															<td align="center" height="34" style="color:#ffffff;" width="100%"><a href="https://secure.actblue.com/donate/rya_template?refcode=rya_footerAB&amount=25" style="color:#ffffff; font-size: 14px; padding-top:10px; padding-bottom:10px;" target="_blank"><span style=" padding-right:2px; padding-left:2px; color:#ffffff;">Donate Once</span></a></td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+								<tr>
+									<td class="spacer" style="padding-top: 10px; padding-bottom: 10px;">&nbsp;</td>
+								</tr>
+								<tr>
+									<td align="center" style="text-align: center;">
+									<table align="center" cellpadding="0" cellspacing="0">
+										<tbody>
+											<tr>
+												<td align="center" style="text-align: center; padding-top:12px; padding-bottom: 12px; padding-left: 15px; padding-right: 15px; font-size: 16px; font-weight: 700; color:#ffffff; border: 3px solid #ffffff; border-radius: 50px; line-height: 1;">Paid for by Tim Ryan for Ohio
+												</td>
+											</tr>
+											<tr>
+												<td align="center" style="text-align: center;">
+												<p style="text-align: center; line-height: 1.30; font-size: 14px; font-weight: 400;color: #ffffff; margin:12px 0 0;">Tim Ryan for Ohio<br />
+												P.O. Box 189<br />
+												Niles, Ohio 44446<br />
+												United States</p>
+												</td>
+											</tr>
+											<tr>
+												<td align="center" style="text-align: center; padding: 0; padding-top: 15px;"><a href="mailto:info@timforoh.com"><img class="socialfooter" src="https://s3.amazonaws.com/ak-timforoh/images/Ryan_EM_AK_WH.png" style="padding: 5px;" /></a> <a href="https://twitter.com/TimRyan" target="_blank"><img class="socialfooter" src="https://s3.amazonaws.com/ak-timforoh/images/Ryan_TW_AK_WH.png" style="padding: 5px;" /></a></td>
+											</tr>
+											<tr>
+												<td class="unsubscribe" align="center" style="text-align: center; border-top: 2px solid #fff;">
+												<p style="text-align: center; line-height: 1.30; font-size: 15px; color: #ffffff; margin:12px 0 0;">{% block unsubscribe %}{% endblock %}</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<!-- SPACER -->
+					<tr>
+						<td class="spacer" style="padding-top: 12px; padding-bottom: 0px;">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			<!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]--></td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>
