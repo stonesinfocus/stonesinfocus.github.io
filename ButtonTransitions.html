@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+	
+	<title>TITLE</title>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<style type="text/css">
+
+		/* CLIENT-SPECIFIC STYLES AND FIXES */
+		
+		body, table, td, a{ /* Prevent WebKit and Windows mobile changing default text sizes */
+			-webkit-text-size-adjust: 100%; 
+			-ms-text-size-adjust: 100%;
+		} 
+		table, td{ /* Remove spacing between tables in Outlook 2007 and up */
+			mso-table-lspace: 0pt; 
+			mso-table-rspace: 0pt;
+		} 
+		img{ /* Allow smoother rendering of resized image in Internet Explorer */
+			-ms-interpolation-mode: bicubic;
+		} 
+
+		
+		
+		/* EMAIL STYLES */
+		
+		table img{ /** use table img instead of just img; else, transparent tracking pixel will also be affected **/
+			border: 0; 
+			height: auto; 
+			line-height: 100%; 
+			outline: none; 
+			text-decoration: none; 
+			max-width: 800px; 
+			width: 100%;
+		}
+
+		.goomoji img{
+			border: 0; 
+			height: 18px; 
+			line-height: 100%; 
+			outline: none; 
+			text-decoration: none;
+			width: auto;
+			padding-bottom: 5px;
+		}
+
+		div.socialfooter_EM {
+			background-image: url('https://go.haleystevensforcongress.com/page/-/Stevens_EmailIcon_Orange.png');
+			display: inline-block;
+			border: 0; 
+			height: auto;  
+			outline: none; 
+			text-decoration: none;
+			width: 32px;
+			max-width: 32px !important;
+			height: 32px !important;
+		}
+
+		div.socialfooter_EM:hover {
+			background-image: url('https://go.haleystevensforcongress.com/page/-/Stevens_EmailIcon_Blue.png');
+			border: 0; 
+			height: auto;  
+			outline: none; 
+			text-decoration: none; 
+			max-width: 32px !important;
+			height: 32px !important;
+		}
+
+		div.socialfooter_FB {
+			background-image: url('#');
+			display: inline-block;
+			border: 0; 
+			height: auto;  
+			outline: none; 
+			text-decoration: none;
+			width: 32px;
+			max-width: 32px !important;
+			height: 32px !important;
+		}
+
+		div.socialfooter_FB:hover {
+			background-image: url('#');
+			border: 0; 
+			height: auto;  
+			outline: none; 
+			text-decoration: none; 
+			max-width: 32px !important;
+			height: 32px !important;
+		}
+
+		div.socialfooter_TW {
+			background-image: url('#');
+			display: inline-block;
+			border: 0; 
+			height: auto;  
+			outline: none; 
+			text-decoration: none;
+			width: 32px; 
+			max-width: 32px !important;
+			height: 32px !important;
+		}
+
+		div.socialfooter_TW:hover {
+			background-image: url('#');
+			border: 0; 
+			height: auto;  
+			outline: none; 
+			text-decoration: none; 
+			max-width: 32px !important;
+			height: 32px !important;
+		}
+		
+		body{
+			height: 100% !important; 
+			margin: 0 !important; 
+			padding: 0 !important; 
+			width: 100% !important;
+		}
+
+		label{
+    		display: inline-block;
+    		font-size: 18px;
+    		clear: left;
+    		width: 101px;
+		}
+
+		input {
+    		border-radius: 5px; 
+    		-webkit-box-shadow: 
+      			inset 0 0 8px  rgba(0,0,0,0.1),
+            	0 0 16px rgba(0,0,0,0.1); 
+    		-moz-box-shadow: 
+      			inset 0 0 8px  rgba(0,0,0,0.1),
+            	0 0 16px rgba(0,0,0,0.1); 
+    		box-shadow: 
+      			inset 0 0 8px  rgba(0,0,0,0.1),
+            	0 0 16px rgba(0,0,0,0.1); 
+    		padding: 10px;
+    		background: rgba(255,255,255,0.5);
+    		margin: 0 0 10px 0;
+    		font-family: "proxima-nova",sans-serif;
+    		font-size: 18px;
+		}
+
+		textarea {
+  			-webkit-transition: all 0.30s ease-in-out;
+  			-moz-transition: all 0.30s ease-in-out;
+  			-ms-transition: all 0.30s ease-in-out;
+  			-o-transition: all 0.30s ease-in-out;
+  			outline: none;
+  			padding: 3px 0px 3px 3px;
+  			margin: 5px 1px 3px 0px;
+  			border: 1px solid #DDDDDD;
+  		}
+
+  		textarea:focus {
+  			box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  			padding: 3px 0px 3px 3px;
+  			margin: 5px 1px 3px 0px;
+  			border: 1px solid rgba(81, 203, 238, 1);
+		}
+		
+		a{
+			color: #f89b37 !important; 
+			text-decoration: none; 
+			font-weight: 700;
+		}
+		a:hover{
+			text-decoration: none;
+		}
+		
+		p{
+			margin:13px 0; /*for yahoo*/
+		}  
+		
+		.social-icon:hover{
+			opacity: 0.8;
+		}
+		
+		.footer a{
+			color:#f89b37 !important; 
+			text-decoration: none;
+		}
+		
+		
+		/* BREAK SOMETHING TEMPLATE STYLES */
+	
+		table td{
+			font-family: "proxima-nova",sans-serif; 
+			font-size: 18px;
+			line-height: 25px;
+			font-weight: 500;
+		}
+
+		.button_blue{
+			/*overflow: hidden;*/
+			mso-padding-alt:0px 20px 0px 20px;
+			margin:0 auto;  /** for yahoo webmail **/
+			background-color: #1671cb;
+			-webkit-transition-duration: 0.4s; /* Safari */
+  			transition-duration: .4s;
+  			cursor: pointer;
+  			border-radius: 5px;
+		}
+
+		.button_blue:hover {
+  			background-color: #41A0FF;
+  			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  			transition-duration: 1s;
+  			transform: scale(1.02);
+  			color: white;
+		}
+
+		.button_blue td{
+			text-align: center;
+			width: 400px;
+			max-width: 600px;
+		}
+		
+		.button_blue a{
+			text-decoration:none; 
+			width:100%; 
+			display:block;
+			font-size: 22px;
+			color: #ffffff;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+
+		.button_blue span{
+			display:inline-block; 
+			position: relative;
+			transition: 0.5s;
+			font-size: 22px;
+			color: #ffffff;
+		}
+
+		.button_blue span:after {
+			content: '»';
+  			position: absolute;
+  			opacity: 0;
+  			top: 0;
+  			right: -25px;
+  			transition: 0.5s;
+  			color: #ffffff;
+		}
+
+		.button_blue:hover span {
+  			padding-right: 30px;
+  			color: #ffffff;
+		}
+
+		.button_blue:hover span:after {
+  			opacity: 1;
+  			right: 0;
+  			color: #ffffff;
+		}
+
+		.button_orange{
+			/*overflow: hidden;*/
+			mso-padding-alt:0px 20px 0px 20px;
+			margin:0 auto;  /** for yahoo webmail **/
+			background-color: #1671cb;
+			-webkit-transition-duration: 0.4s; /* Safari */
+  			transition-duration: .4s;
+  			cursor: pointer;
+  			border-radius: 5px;
+		}
+
+		.button_orange:hover {
+  			background-color: #f89b37;
+  			color: white;
+		}
+
+		.button_orange td{
+			text-align: center;
+			width: 400px;
+			max-width: 600px;
+		}
+		
+		.button_orange a{
+			text-decoration:none; 
+			width:100%; 
+			display:block;
+			font-size: 22px;
+			color: #ffffff;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+
+		.button_orange span{
+			display:inline-block; 
+			padding-top:0; 
+			padding-bottom:0;
+		}
+
+		.button_aqua{
+			/*overflow: hidden;*/
+			mso-padding-alt:0px 20px 0px 20px;
+			margin:0 auto;  /** for yahoo webmail **/
+			background-color: #1671cb;
+			-webkit-transition-duration: 0.4s; /* Safari */
+  			transition-duration: .4s;
+  			cursor: pointer;
+  			border-radius: 5px;
+		}
+
+		.button_aqua:hover {
+  			background-color: #28C0C7;
+  			color: white;
+		}
+
+		.button_aqua td{
+			text-align: center;
+			width: 400px;
+			max-width: 600px;
+		}
+		
+		.button_aqua a{
+			text-decoration:none; 
+			width:100%; 
+			display:block;
+			font-size: 22px;
+			color: #ffffff;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+
+		.button_aqua span{
+			display:inline-block; 
+			padding-top:0; 
+			padding-bottom:0;
+		}
+
+		.centering_wrapper {
+			width: 100%;   /** for yahoo webmail **/
+			text-align: center;
+		}
+		
+		.centering_wrapper td{
+			text-align: center;
+		}
+
+		.centering_wrapper table{
+			margin:0 auto; /** for yahoo webmail **/
+		}
+		
+		.spacer{
+			line-height: 0;
+			border-collapse: collapse;
+		}
+
+		tr.spaceAbove>td {
+  			padding-top: 1em;
+		}
+
+		/* MOBILE STYLES */
+		@media screen and (max-width: 550px) {
+
+			/* ALLOWS FOR FLUID TABLES */
+			.wrapper {
+				width: 100% !important;
+				max-width: 100% !important;
+			}
+
+			/* ADJUSTS LAYOUT OF LOGO IMAGE */
+			.logo img {
+				margin: 0 auto !important;
+				width: 275px !important;
+			}
+
+			/* USE THESE CLASSES TO HIDE CONTENT ON MOBILE */
+			.mobile-hide {
+				display: none !important;
+			}
+
+			.img-max {
+				max-width: 100% !important;
+				width: 100% !important;
+				height: auto !important;
+			}
+
+			/* FULL-WIDTH TABLES */
+			.responsive-table {
+				width: 100% !important;
+			}
+
+			/* UTILITY CLASSES FOR ADJUSTING PADDING ON MOBILE */
+			.padding {
+				padding: 10px 5% 15px 5% !important;
+			}
+
+			.padding-meta {
+				padding: 30px 5% 0px 5% !important;
+				text-align: center;
+			}
+
+			.padding-copy {
+				padding: 10px 0 10px 0 !important;
+			}
+
+			.no-padding {
+				padding: 0 !important;
+			}
+
+			.section-padding {
+				padding: 50px 15px 50px 15px !important;
+			}
+
+			/* ADJUST BUTTONS ON MOBILE */
+		
+			.mobile-button-container {
+				margin: 0 auto;
+				width: 100% !important;
+			}
+			
+			.mobile-button {
+				padding: 15px !important;
+				border: 0 !important;
+				font-size: 16px !important;
+				display: block !important;
+			}
+			
+		}
+
+		/*** BREAK SOMETHING responsive styles ***/
+		@media only screen and (max-device-width:550px), only screen and (max-width: 550px) {
+			
+			table[class="button"] {
+				width: 100% !important;
+				max-width: 350px !important;
+			}
+
+			.button a{
+			    text-decoration:none; 
+			    width:100%; 
+			    display:block;
+			    font-size: 18px !important;
+			    padding-top: 13px !important;
+			    padding-bottom: 13px !important;
+		    }
+
+		    .button span{
+		    	font-size: 18px !important;
+		    }
+				
+			.responsive_image {
+				width: 100% !important;
+				max-width: 600px !important;
+			}
+			
+			.fixed-width-btn{
+				width: 100% !important;
+			}
+			
+			.button-grid-wrapper{
+				width: 100% !important;				
+			}
+		}
+
+		@media only screen and (max-device-width:360px), only screen and (max-width: 360px) {
+			
+			table[class="button"] {
+				width: 100% !important;
+				max-width: 310px !important;
+			}
+
+			.button a{
+			    text-decoration:none; 
+			    width:100%; 
+			    display:block;
+			    font-size: 14px !important;
+			    padding-top: 10px !important;
+			    padding-bottom: 10px !important;
+		    }
+
+		    .button span{
+		    	font-size: 14px !important;
+		    }
+				
+			.responsive_image {
+				width: 100% !important;
+				max-width: 600px !important;
+			}
+			
+			.fixed-width-btn{
+				width: 100% !important;
+			}
+			
+			.button-grid-wrapper{
+				width: 100% !important;				
+			}
+		}
+
+		@media only screen and (max-device-width:330px), only screen and (max-width: 330px) {
+			
+			table[class="button"] {
+				width: 100% !important;
+				max-width: 310px !important;
+			}
+
+			.button a{
+			    text-decoration:none; 
+			    width:100%; 
+			    display:block;
+			    font-size: 14px !important;
+			    padding-top: 10px !important;
+			    padding-bottom: 10px !important;
+		    }
+
+		    .button span{
+		    	font-size: 14px !important;
+		    }
+				
+			.responsive_image {
+				width: 100% !important;
+				max-width: 600px !important;
+			}
+			
+			.fixed-width-btn{
+				width: 100% !important;
+			}
+			
+			.button-grid-wrapper{
+				width: 100% !important;				
+			}
+		}
+
+		@media only screen and (max-device-width:300px), only screen and (max-width: 300px) {
+			
+			table[class="button"] {
+				width: 100% !important;
+				max-width: 280px !important;
+			}
+
+			.button a{
+			    text-decoration:none; 
+			    width:100%; 
+			    display:block;
+			    font-size: 12px !important;
+		    }
+
+		    .button span{
+		    	font-size: 12px !important;
+		    }
+				
+			.responsive_image {
+				width: 100% !important;
+				max-width: 600px !important;
+			}
+			
+			.fixed-width-btn{
+				width: 100% !important;
+			}
+			
+			.button-grid-wrapper{
+				width: 100% !important;				
+			}
+		}
+	
+		/*** OTHER FIXES ***/
+		/*** These must stay down here, otherwise renders centering problems for yahoo ***/
+		
+		div[style*="margin: 16px 0;"] { /* ANDROID CENTER FIX */
+			margin: 0 !important; 
+		}
+		
+		a[x-apple-data-detectors] { /* iOS BLUE LINKS */
+			color: inherit !important;
+			text-decoration: none !important;
+			font-size: inherit !important;
+			font-family: inherit !important;
+			font-weight: inherit !important;
+			line-height: inherit !important;
+		}
+			
+	</style>
+	
+</head>
+	
+	
+<body style="margin: 0 !important; padding: 0 !important; font-family: proxima-nova,sans-serif;">
+
+	
+<!-- HIDDEN PREHEADER TEXT -->
+<div style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: proxima-nova,sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
+   
+</div>
+	
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<!-- HEADER -->
+	<tr>
+		<td bgcolor="#ffffff" align="center">
+			<!--[if (gte mso 9)|(IE)]>
+			<table align="center" border="0" cellspacing="0" cellpadding="0" width="800">
+			<tr>
+			<td align="center" valign="top" width="800">
+			<![endif]-->
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 800px;" class="wrapper">
+					
+				<!-- SPACER -->
+				<tr>
+					<td class="spacer" style="padding-top: 5px; padding-bottom: 5px;">&nbsp;</td>
+				</tr>
+
+				<!-- LOGO -->
+				<tr>
+					<td align="center" valign="top" style="padding: 27px 5px 0;" class="logo">
+						<a href="#" target="_blank">
+							<img src="https://via.placeholder.com/280x200.png?text=Placeholder
+
+							C/O https://placeholder.com/" class="logo" width="280" height="auto" style="display: block; width: 280px;" border="0">
+						</a>
+					</td>
+				</tr>
+
+				<!-- SPACER -->
+				<tr>
+					<td class="spacer" style="padding-top: 10px; padding-bottom: 0px;">&nbsp;</td>
+				</tr>
+
+			</table>
+			<!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]-->
+		</td>
+	</tr>  
+
+	<!-- CONTENT  -->
+	<tr>
+		<td bgcolor="#ffffff" align="center" style="padding: 15px;">
+			<!--[if (gte mso 9)|(IE)]>
+			<table align="center" border="0" cellspacing="0" cellpadding="0" width="800">
+			<tr>
+			<td align="center" valign="top" width="800">
+			<![endif]-->
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 800px;" class="responsive-table">
+				<tr>
+					<td>
+						<!-- COPY -->
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td align="left" style="padding: 5px 0 0 0; color:#000000; font-weight: normal;" class="padding-copy">
+								<!-- WRAPPER TOP  -->
+{% set askamounts = [5,10,25] %}
+<p>
+	%%FirstName(Team)%% --</p>
+<p align="center">
+	<a href="#"><img alt="Haley was elected one year ago today! Chip in to keep her fighting for us: Donate" class="responsive_image" src="https://via.placeholder.com/600x400.png?text=Placeholder" style="max-width: 600px;" /></a></p>
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="centering_wrapper" width="100%">
+	<tbody>
+		<tr>
+			<td align="center" style="padding-top:2px; padding-bottom:2px;">
+				<!-- white space between buttons edited here-->
+				<table align="center" border="0" cellpadding="0" cellspacing="0" class="button_orange button" style="border-radius: 5px;">
+					<!-- for rounded corners add bordere-radius to style -->
+					<tbody>
+						<tr>
+							<td style="border-radius: 5px;">
+								<!--- for outlined button, add border style here. CANNOT be combined with rounded corners -->
+								<table border="0" cellpadding="0" cellspacing="0" width="100%" class="button_orange button">
+									<tbody>
+										<tr>
+											<td align="center" height="34" style=" color:#ffffff;" width="100%">
+												<a href="#" style="color:#ffffff;  font-size: 22px; padding-top:15px; padding-bottom:15px;" target="_blank"><span style=" padding-right:2px; padding-left:2px; color:#ffffff;">Gimme The Loot!</span></a></td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<p>
+	Morbi blandit cursus risus at ultrices mi tempus. Turpis massa tincidunt dui ut ornare.</strong></p>
+<p>
+	<strong>Ut eu sem integer vitae justo. Vel risus commodo viverra maecenas accumsan. Viverra nibh cras pulvinar mattis nunc sed.</strong></p>
+<p>
+	<a href="#"><strong>Sapien pellentesque habitant morbi tristique senectus et netus et malesuada. &gt;&gt;</strong></a></p>
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="centering_wrapper" style="max-width: 500px;" width="100%">
+	<tbody>
+		<tr>
+			<td align="center" style="padding-top:4px; padding-bottom:4px; padding-right: 4px; width: 50%;">
+				<!-- white space between buttons edited here-->
+				<table align="center" border="0" cellpadding="0" cellspacing="0" class="button_blue" style="background-color: #1671cb; border-radius: 5px;">
+					<!-- for rounded corners add bordere-radius to style -->
+					<tbody>
+						<tr>
+							<td>
+								<!--- for outlined button, add border style here. CANNOT be combined with rounded corners -->
+								<table border="0" cellpadding="0" cellspacing="0" class="button_blue button" width="100%">
+									<tbody>
+										<tr>
+											<td align="center" height="34" style=" color:#ffffff;" width="50%">
+												<a href="#" style="color:#ffffff; padding-top:15px; padding-bottom:15px;" target="_blank"><span style="color:#ffffff;">Chip in $25</span></a></td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+			<td align="center" style="padding-top:4px; padding-bottom:4px; padding-left: 4px; width: 50%;">
+				<!-- white space between buttons edited here-->
+				<table align="center" border="0" cellpadding="0" cellspacing="0" class="button_blue" style="background-color: #1671cb; border-radius: 5px;">
+					<!-- for rounded corners add bordere-radius to style -->
+					<tbody>
+						<tr>
+							<td>
+								<!--- for outlined button, add border style here. CANNOT be combined with rounded corners -->
+								<table border="0" cellpadding="0" cellspacing="0" class="button_blue button" width="100%">
+									<tbody>
+										<tr>
+											<td align="center" height="34" style=" color:#ffffff;" width="50%">
+												<a href="#" style="color:#ffffff; padding-top:15px; padding-bottom:15px;" target="_blank"><span style="color:#ffffff;">Chip in $50</span></a></td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td align="center" style="padding-top:4px; padding-bottom:4px; padding-right: 4px; width: 50%;">
+				<!-- white space between buttons edited here-->
+				<table align="center" border="0" cellpadding="0" cellspacing="0" class="button_blue" style="background-color: #1671cb; border-radius: 5px;">
+					<!-- for rounded corners add bordere-radius to style -->
+					<tbody>
+						<tr>
+							<td>
+								<!--- for outlined button, add border style here. CANNOT be combined with rounded corners -->
+								<table border="0" cellpadding="0" cellspacing="0" class="button_blue button" width="100%">
+									<tbody>
+										<tr>
+											<td align="center" height="34" style=" color:#ffffff;" width="50%">
+												<a href="#" style="color:#ffffff; padding-top:15px; padding-bottom:15px;" target="_blank"><span style="color:#ffffff;">Chip in $100</span></a></td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+			<td align="center" style="padding-top:4px; padding-bottom:4px; padding-left: 4px; width: 50%;">
+				<!-- white space between buttons edited here-->
+				<table align="center" border="0" cellpadding="0" cellspacing="0" class="button_blue" style="background-color: #1671cb; border-radius: 5px;">
+					<!-- for rounded corners add bordere-radius to style -->
+					<tbody>
+						<tr>
+							<td>
+								<!--- for outlined button, add border style here. CANNOT be combined with rounded corners -->
+								<table border="0" cellpadding="0" cellspacing="0" class="button_blue button" width="100%">
+									<tbody>
+										<tr>
+											<td align="center" height="34" style=" color:#ffffff;" width="50%">
+												<a href="#" style="color:#ffffff; padding-top:15px; padding-bottom:15px;" target="_blank"><span style="color:#ffffff;">Chip in $200</span></a></td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td align="center" style="padding-top:4px; padding-bottom:4px; padding-right: 4px; width: 50%;">
+				<!-- white space between buttons edited here-->
+				<table align="center" border="0" cellpadding="0" cellspacing="0" class="button_blue" style="background-color: #1671cb; border-radius: 5px;">
+					<!-- for rounded corners add bordere-radius to style -->
+					<tbody>
+						<tr>
+							<td>
+								<!--- for outlined button, add border style here. CANNOT be combined with rounded corners -->
+								<table border="0" cellpadding="0" cellspacing="0" class="button_blue button" width="100%">
+									<tbody>
+										<tr>
+											<td align="center" height="34" style=" color:#ffffff;" width="50%">
+												<a href="#" style="color:#ffffff; padding-top:15px; padding-bottom:15px;" target="_blank"><span style="color:#ffffff;">Chip in $250</span></a></td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+			<td align="center" style="padding-top:4px; padding-bottom:4px; padding-left: 4px; width: 50%;">
+				<!-- white space between buttons edited here-->
+				<table align="center" border="0" cellpadding="0" cellspacing="0" class="button_blue" style="background-color: #1671cb; border-radius: 5px;">
+					<!-- for rounded corners add bordere-radius to style -->
+					<tbody>
+						<tr>
+							<td>
+								<!--- for outlined button, add border style here. CANNOT be combined with rounded corners -->
+								<table border="0" cellpadding="0" cellspacing="0" class="button_blue button" width="100%">
+									<tbody>
+										<tr>
+											<td align="center" height="34" style=" color:#ffffff;" width="50%">
+												<a href="#" style="color:#ffffff; padding-top:15px; padding-bottom:15px;" target="_blank"><span style="color:#ffffff;">Other Amount</span></a></td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	<strong>Fringilla ut morbi tincidunt augue interdum velit. Quam quisque id diam vel quam elementum pulvinar.</strong></p>
+<p>
+	-- Neque convallis</p>
+
+<!-- WRAPPER BOTTOM -->
+								</td>
+							</tr>
+						</table> <!-- COPY -->
+					</td>
+				</tr>
+					
+				<!-- SPACER -->
+				<tr>
+					<td class="spacer" style="padding-top: 5px; padding-bottom: 5px;">&nbsp;</td>
+				</tr>
+				
+			</table> <!-- COPY WRAPPER -->
+			<!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]-->
+		</td>
+	</tr>
+
+	<!-- FOOTER  -->
+	<tr>
+		<td bgcolor="#F9F9F9" align="center">
+			<!--[if (gte mso 9)|(IE)]>
+			<table align="center" border="0" cellspacing="0" cellpadding="0" width="800">
+			<tr>
+			<td align="center" valign="top" width="800">
+			<![endif]-->
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style=" max-width: 800px; padding: 25px 5px;" class="responsive-table">
+
+				<!-- SPACER -->
+				<!-- REMOVED -->				
+	
+				<!-- UNSUBSCRIBE COPY -->
+				<tr>
+					<td align="center" style="text-align: center; font-size: 14px; font-style: bold; color:#fff;">
+						<p style="text-align: center;">
+							 <a href="#" target="_blank" style="text-decoration: none; text-transform: uppercase; letter-spacing:.5px; ">Amet justo donec</a>
+						</p>						
+					</td>
+				</tr>  
+				
+				<!-- DISCLAIMER -->
+				<tr>
+					<td align="center" class="cta" style="text-align: center; padding: 0;">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="centering_wrapper" style="width:100%; text-align:center;">
+							<tr>
+								<td align="center" style="text-align: center;">
+									 <p style="text-align: center; line-height: 1.30; font-size: 11px; color: #000000; margin:12px 0 0;">Velit egestas dui id ornare. Non arcu risus quis varius quam. <a class="footer" href="#">Lorem ipsum dolor sit amet.</a></p>
+								</td>
+							</tr>
+
+							<!-- UNSUBSCRIBE COPY -->
+							<tr>
+								<td align="center" style="text-align: center;">
+									 <p style="text-align: center; line-height: 1.30; font-size: 11px; color: #000000; margin:12px 0 0;">Ut tristique et egestas quis ipsum suspendisse ultrices. <a class="footer" href="#">Eget velit aliquet sagittis id.</a></p>
+								</td>
+							</tr>
+							<tr>
+								<td class="spacer" style="padding-top: 10px; padding-bottom: 10px;">&nbsp;
+								</td>
+							</tr>
+							<tr>
+								<td align="center" style="text-align: center;">
+									<table cellspacing="0" cellpadding="0" align="center">
+										<tr>
+											<td align="center" style="text-align: center; padding-top:12px; padding-bottom: 12px; padding-left: 15px; padding-right: 15px; font-size: 14px; font-weight: 700; color:#f89b37; border: 3px solid #1671cb; border-radius: 5px; line-height: 1;">Tristique senectus et netus et</td>
+										</tr>
+										<tr>
+											<td align="center" style="text-align: center;">
+									 			<p style="text-align: center; line-height: 1.30; font-size: 12px; color: #000000; margin:12px 0 0;">Amet justo donec<br>
+												Viverra ipsum<br>
+												Address
+												<br>
+												City, State Zipcode
+												</p>
+											</td>
+										</tr>
+										<tr>
+											<td align="center" style="text-align: center; padding: 0; padding-top: 15px;">
+													<a href="mailto:xyz@zyx.com" style="padding: 5px;"><div class="socialfooter_EM"></div></a> <a href="#" style="padding: 5px;" target="_blank"><div class="socialfooter_FB"></div></a> <a href="#" style="padding: 5px;" target="_blank"><div class="socialfooter_TW"></div></a>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				
+				<!-- SPACER -->
+				<tr>
+					<td class="spacer" style="padding-top: 25px; padding-bottom: 12px;">&nbsp;</td>
+				</tr>
+				
+			</table>
+			<!--[if (gte mso 9)|(IE)]>
+			</td>
+			</tr>
+			</table>
+			<![endif]-->
+		</td>
+	</tr>
+	
+</table>
+
+</body>
+</html>
